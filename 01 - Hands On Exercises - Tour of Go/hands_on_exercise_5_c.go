@@ -1,0 +1,30 @@
+// TYPE CONVERSIONS
+
+/* Some numeric conversions:
+
+	var i int = 42
+	var f float64 = float64(i)
+	var u uint = uint(f)
+
+Or, put more simply:
+
+	i := 42
+	f := float64(i)
+	u := uint(f)
+*/
+
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+// unlike in C, in Go assignment of variables requires an explicit conversion
+
+func main() {
+	var x, y int = 3, 4
+	var f float64 = math.Sqrt(float64(x*x + y*y))
+	var z uint = uint(f)
+	fmt.Println(x, y, z)
+}
