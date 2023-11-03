@@ -14,6 +14,6 @@ import "fmt"
 
 func main() {
 	x := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
-	x = append(x[:4], x[6:]...)
+	x = append(x[:3], x[6:]...) // ... to unfurl (give all values)
 	fmt.Println("x:", x)
 }
